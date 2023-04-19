@@ -1,0 +1,62 @@
+<div class="side-nav-content side-nav" [class.side-nav-content]="isFixedWidth" [style.width.px]="widthValue">
+    <ul class="nav-list nav-list-open border-red" [class.nav-list]="isFixedWidth" [style.width.px]="widthValue">
+        <li class="nav-list-item border-red">
+            <i class="fas fa-home fa-2x icon"></i>
+            <a class="toggled-area issubmenu" (click)="SubMenu(1)">Home</a>
+            <!-- <i class="fa-solid fa-arrow-down-to-line downarrow "></i> -->
+            <ul class="sub-list border-red ">
+                <li><a class="sub-menu-item" (click)="SubMenu(1)" >Home1</a></li>
+                <li><a class="sub-menu-item" (click)="SubMenu(1)">Home2</a></li>
+                <li><a class="sub-menu-item" (click)="SubMenu(1)">Home3</a></li>
+            </ul>
+        </li>
+        <div [ngClass]="isHomeSubMenuOpen?'submenuopen':'submenuclose'">
+            <ul class="">
+                <li> <span class="emoji">😊</span> <a href="/">Home1</a></li>
+                <li> <span class="emoji">😊</span> <a href="/">Home2</a></li>
+                <li> <span class="emoji">😊</span> <a href="/">Home3</a></li>
+            </ul>
+        </div>
+
+        <li class="nav-list-item border-red">
+            <i class="fa-solid fa-circle-info fa-2x icon"></i>
+            <a class="toggled-area issubmenu" (click)="SubMenu(2)">About</a>
+            <!-- <i class="fa-solid fa-arrow-down-to-line downarrow border-red"></i> -->
+            <ul class="sub-list border-red ">
+                <li><a class="sub-menu-item" (click)="SubMenu(2)">About1</a></li>
+                <li><a class="sub-menu-item" (click)="SubMenu(2)">About2</a></li>
+                <li><a class="sub-menu-item" (click)="SubMenu(2)">About3</a></li>
+            </ul>
+        </li>
+        <div [ngClass]="isAboutSubMenuOpen?'submenuopen':'submenuclose'">
+            <ul class="">
+                <li> <span class="emoji">😊</span> <a href="/">About1</a></li>
+                <li> <span class="emoji">😊</span> <a href="/">About2</a></li>
+                <li> <span class="emoji">😊</span> <a href="/">About3</a></li>
+            </ul>
+        </div>
+        <li class="nav-list-item border-red">
+            <i class="fa-solid fa-phone fa-2x icon"></i>
+            <a class="toggled-area" href="/">Contact</a>
+        </li>
+
+        <li class="nav-list-item border-red">
+            <i class="fa-solid fa-gear fa-2x icon"></i>
+            <a class="toggled-area" href="/">Setting</a>
+        </li>
+
+        <li class="nav-list-item border-red">
+            <i class="fa-solid fa-box fa-2x icon"></i>
+            <a class="toggled-area" href="/">Product</a>
+        </li>
+        <li class="nav-list-item border-red">
+            <i class="fa-solid fa-chart-line fa-2x icon"></i>
+            <a class="toggled-area" href="/">Analytics</a>
+        </li>
+    </ul>
+    <div class="navbar">
+        <div class="nav-button" (click)="SideNavToggled()">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </div>
+    </div>
+</div>
